@@ -53,6 +53,7 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+  root to: 'articles#index'
   resources :articles
   #This line tells Rails that we have a resource named articles
   #and the router should expect requests to follow the RESTful
