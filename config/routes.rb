@@ -57,6 +57,7 @@ Rails.application.routes.draw do
   resources :articles do
     resources :comments
   end
+  resources :tags
   #This line tells Rails that we have a resource named articles
   #and the router should expect requests to follow the RESTful
   #model of web interaction (REpresentational State Transfer).
