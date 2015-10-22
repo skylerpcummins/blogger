@@ -58,6 +58,11 @@ Rails.application.routes.draw do
     resources :comments
   end
   resources :tags
+  resources :authors
+  resources :author_sessions, only: [ :new, :create, :destroy ]
+
+  get 'login' => 'author_sessions#new'
+  get 'logout' => 'author_sessions#destroy'
   #This line tells Rails that we have a resource named articles
   #and the router should expect requests to follow the RESTful
   #model of web interaction (REpresentational State Transfer).
